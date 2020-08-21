@@ -43,14 +43,11 @@ Passos para concluir o desafio:
  
  Telas para referência visual:
 
-![Screen Shot 2020-08-21 at 13 10 21](https://user-images.githubusercontent.com/6299673/90911732-c3ae8d80-e3af-11ea-96ae-e54d12a8ec07.png)
-
+![Screen Shot 2020-08-21 at 13 12 22](https://user-images.githubusercontent.com/6299673/90911871-feb0c100-e3af-11ea-9c5c-476026dbb1d9.png)
 
 ![Screen Shot 2020-08-21 at 13 10 15](https://user-images.githubusercontent.com/6299673/90911738-c6a97e00-e3af-11ea-9178-cba929fd6c16.png)
 
-
-![Screen Shot 2020-08-21 at 13 10 08](https://user-images.githubusercontent.com/6299673/90911743-c90bd800-e3af-11ea-8338-f78592272a7f.png)
-
+![Screen Shot 2020-08-21 at 13 10 21](https://user-images.githubusercontent.com/6299673/90911732-c3ae8d80-e3af-11ea-96ae-e54d12a8ec07.png)
 
     
  ### O layout de cores, fica por sua conta.
