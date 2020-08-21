@@ -77,7 +77,7 @@ resulta também em uma não preocupação)
  
 ---------------------------------------------------------------------------------------------------------------------------
 
-### * tempo de desenvolvimento:
+### tempo de desenvolvimento:
 
 Uma vez feito o PR da primeira etapa você tem 2 semanas para fazer isso. Se precisar mais tempo faça o PR apenas quando
 souber que vai conseguir finalizar esse teste. Faça pelo menos 3 commits para sabermos que você sabe dividir suas tarefas.
