@@ -20,17 +20,16 @@ Passos para concluir o desafio:
 
 ### 2a etapa:
 
-- O aplicativo que você deve criar é o seguinte:
-
--- Crie uma tela de Login, com usuario e senha com botão Login, e um botão de cadastro.
--- Crie uma tela de cadastro onde o usuario digita 
+* O aplicativo que você deve criar é o seguinte:
+   Crie uma tela de Login, com usuario e senha com botão Login, e um botão de cadastro.
+   Crie uma tela de cadastro onde o usuario digita 
   * nome de usuario
   * senha
   botão de cadastrar usuario
--- Crie uma tela de entrada do aplicativo que possua 
-  * um header de busca no topo (que ao digitar por exemplo Contato, filtre a lista inferior e mostre só o Contato como primeira opção ao selecionar)
-  * uma lista de opcoes do aplicativo sendo
-    -- no header dessa lista 3 botoes com a seguinte descricao
+* Crie uma tela de entrada do aplicativo que possua 
+  um header de busca no topo (que ao digitar por exemplo Contato, filtre a lista inferior e mostre só o Contato como primeira opção ao selecionar)
+  uma lista de opcoes do aplicativo sendo
+    - no header dessa lista 3 botoes com a seguinte descricao
     - botao 1: Minha conta
     - botao 2: Meu Saldo
     - botao 3: Minha fatura
