@@ -68,6 +68,8 @@ resulta também em uma não preocupação)
 - Fazer cache do login, uma vez digitado e sucesso, não precise mais digitar o usuario e senha na próxima vez que entrar no app.
 - Usar o viewmodel do android é um ### plus
 - Caso queira usar um site com json estatico para consumir uma informação real é um ### plus 
+ - https://beeceptor.com/
+ - https://designer.mocky.io/
 
 ---------------------------------------------------------------------------------------------------------------------------
 
