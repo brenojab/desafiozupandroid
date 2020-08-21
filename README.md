@@ -50,7 +50,7 @@ Passos para concluir o desafio:
 ![Screen Shot 2020-08-21 at 13 10 21](https://user-images.githubusercontent.com/6299673/90911732-c3ae8d80-e3af-11ea-96ae-e54d12a8ec07.png)
 
     
- ### O layout de cores, fica por sua conta.
+ ### O layout de cores, fica por sua conta. Você pode melhorar ele, trazer melhorias etc. Não vamos cobrar muito o layout por no geral trabalhamos com protótipos feitos por designers.
  
  ---------------------------------------------------------------------------------------------------------------------------
  
