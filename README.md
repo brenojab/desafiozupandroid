@@ -21,13 +21,13 @@ Passos para concluir o desafio:
 ### 2a etapa:
 
 - O aplicativo que você deve criar é o seguinte:
--- Crie uma tela de Login, com usuario e senha, e um botão de cadastro.
+-- Crie uma tela de Login, com usuario e senha com botão Login, e um botão de cadastro.
 -- Crie uma tela de cadastro onde o usuario digita 
   * nome de usuario
   * senha
   botão de cadastrar usuario
 -- Crie uma tela de entrada do aplicativo que possua 
-  * um header de busca no topo
+  * um header de busca no topo ( Que ao digitar por exemplo Contato, filtre a lista inferior e mostre só o Contato como primeira opção ao selecionar)
   * uma lista de opcoes do aplicativo sendo
     -- no header dessa lista 3 botoes com a seguinte descricao
     - botao 1: Minha conta
@@ -40,6 +40,18 @@ Passos para concluir o desafio:
     - Contato
     
  Todas as telas vão para uma tela em branco para não tornar o teste muito demorado também.
+ 
+ Telas para referência visual:
+
+![Screen Shot 2020-08-21 at 13 10 21](https://user-images.githubusercontent.com/6299673/90911732-c3ae8d80-e3af-11ea-96ae-e54d12a8ec07.png)
+
+
+![Screen Shot 2020-08-21 at 13 10 15](https://user-images.githubusercontent.com/6299673/90911738-c6a97e00-e3af-11ea-9178-cba929fd6c16.png)
+
+
+![Screen Shot 2020-08-21 at 13 10 08](https://user-images.githubusercontent.com/6299673/90911743-c90bd800-e3af-11ea-8338-f78592272a7f.png)
+
+
     
  ### O layout de cores, fica por sua conta.
  
