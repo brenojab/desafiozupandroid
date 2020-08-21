@@ -56,7 +56,7 @@ Passos para concluir o desafio:
  
  ### 3a etapa:
  
-- O que esperamos do seu desenvolvimento:
+O que esperamos do seu desenvolvimento:
 
 - Separação de responsabilidades entre as camadas do app.
 - Como você organiza seu código dentro de suas classes
