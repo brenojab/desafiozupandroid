@@ -70,6 +70,7 @@ resulta também em uma não preocupação)
 - navegação entre suas telas, entre activities e fragments e o porquê de escolher um ou outro.
 - Mostrar conhecimentos em Orientação a Objeto e SOLID.
 - Evitar boilerplate
+- Injeção de dependência com o framework ou nativo como preferir.
 - Legibilidade do seus métodos podendo ser em Inglês ou Portugues, fique a vontade em decidir.
 - Para as chamadas de api, crie uma classe mock que responda um login de sucesso e traga uma lista do seu aplicativo como descrito acima.
 - Modularizar o app é um ### plus
