@@ -108,3 +108,7 @@ Porém o teste esta todo em você, não há chamadas reais, tudo é fake no mome
 
 
 ---------------------------------------------------------------------------------------------------------------------------
+### Resultado de nivelamento:
+
+Voce pode fazer ate onde se sentir a vontade, o resultado conforme mais pontos sao atendidos, maior sua chance de senioridade.
+
