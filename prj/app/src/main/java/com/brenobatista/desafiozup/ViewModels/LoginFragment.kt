@@ -32,7 +32,7 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         view.findViewById<Button>(R.id.buttonLogin).setOnClickListener {
-            findNavController().navigate(R.id.action_settings)
+            findNavController().navigate(R.id.action_loginFragment_to_cadastroFragment)
         }
     }
 }
