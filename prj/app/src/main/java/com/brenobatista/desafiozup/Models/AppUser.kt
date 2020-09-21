@@ -1,3 +1,10 @@
 package com.brenobatista.desafiozup.Models
 
-class AppUser(val username: String, var password: String)
+import com.google.gson.annotations.SerializedName
+
+data class AppUser(
+    @SerializedName("username")
+    var username: String,
+    @SerializedName("password")
+    var password: String
+)

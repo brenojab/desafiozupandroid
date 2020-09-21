@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.brenobatista.desafiozup.Data.ReposAdapter
 import com.brenobatista.desafiozup.R
-import com.brenobatista.desafiozup.Services.SearchResult
+import com.brenobatista.desafiozup.Services.ServicesResult
 import com.brenobatista.desafiozup.Services.createService
 import com.google.gson.GsonBuilder
 import retrofit2.Call
@@ -28,22 +28,18 @@ class MainListViewActivity : AppCompatActivity() {
         list.adapter = adapter
 
         var service = createService()
-        service.searchServices().enqueue(object : Callback<SearchResult> {
+        service.searchServices().enqueue(object : Callback<ServicesResult> {
 
-            override fun onFailure(call: Call<SearchResult>, t: Throwable) {
+            override fun onFailure(call: Call<ServicesResult>, t: Throwable) {
                 // Tratar exceções
                 Log.wtf("GET_DATA_ERROR","Erro ao obter dados do serviço", t)
             }
 
-            override fun onResponse(call: Call<SearchResult>, response: Response<SearchResult>) {
-
+            override fun onResponse(call: Call<ServicesResult>, response: Response<ServicesResult>) {
                 val data = response.body()
-                val repos = data?.items
+                val repos = data?.services
 
-                if(repos != null) {
-                    Log.wtf("","")
-                }
-                //adapter.submitList(repos)
+                adapter.submitList(repos)
             }
 
         })

@@ -2,8 +2,9 @@ package com.brenobatista.desafiozup.Models
 
 import com.google.gson.annotations.SerializedName
 
-data class ServiceData(
+data class Status (
 
-    @SerializedName("serviceName")
-    val serviceName: String
+    @SerializedName("status")
+    var status : String
+
 )
