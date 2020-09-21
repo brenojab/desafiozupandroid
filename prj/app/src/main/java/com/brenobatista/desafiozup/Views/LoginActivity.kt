@@ -3,8 +3,6 @@ package com.brenobatista.desafiozup.Views
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.brenobatista.desafiozup.Models.AppUser
-import com.brenobatista.desafiozup.Models.Status
 import com.brenobatista.desafiozup.R
 import com.brenobatista.desafiozup.Services.UsersResult
 import com.brenobatista.desafiozup.Services.createService
