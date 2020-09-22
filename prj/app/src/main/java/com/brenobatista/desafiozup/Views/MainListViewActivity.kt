@@ -18,6 +18,7 @@ import retrofit2.Response
 class MainListViewActivity : AppCompatActivity() {
 
     private val reposAdapter = ReposAdapter()
+    private var filterAdapter = ReposAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,18 +60,33 @@ class MainListViewActivity : AppCompatActivity() {
 
         if (searcher != null) {
             val searchView = searcher.actionView as SearchView
+
             searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
                 override fun onQueryTextSubmit(query: String?): Boolean {
                     return true
                 }
 
-                override fun onQueryTextChange(newText: String?): Boolean {
-                    // TODO: filtrar dados do reposAdapter
+                override fun onQueryTextChange(searchQuery: String?): Boolean {
+
+                    val searchPattern = searchQuery.toString().toLowerCase()
+
+                    var lst = reposAdapter.currentList.filter { p ->
+                        p.serviceName.toLowerCase().contains(searchPattern)
+                    }
+                    filterAdapter.submitList(lst)
+
+                    val view: RecyclerView = findViewById(R.id.recyclerViewServicos)
+                    view.adapter = filterAdapter
+
                     return true
                 }
             })
         }
 
         return super.onCreateOptionsMenu(menu)
+    }
+
+    private fun filter() {
+
     }
 }
