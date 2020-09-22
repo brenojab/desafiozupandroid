@@ -25,7 +25,7 @@ class MainListViewActivity : AppCompatActivity() {
         list.adapter = vm.reposAdapter
 
         // Criação dos serviços de consumo de APIs
-        vm.initSearchService()
+        vm.initServices()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -43,14 +43,9 @@ class MainListViewActivity : AppCompatActivity() {
                 override fun onQueryTextChange(searchQuery: String?): Boolean {
 
                     val searchPattern = searchQuery.toString().toLowerCase()
-
-                    var lst = vm.reposAdapter.currentList.filter { p ->
-                        p.serviceName.toLowerCase().contains(searchPattern)
-                    }
-                    vm.filterAdapter.submitList(lst)
-
                     val view: RecyclerView = findViewById(R.id.recyclerViewServicos)
-                    view.adapter = vm.filterAdapter
+
+                    view.adapter = vm.filterData(searchPattern)
 
                     return true
                 }

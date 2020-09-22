@@ -5,18 +5,14 @@ import androidx.lifecycle.ViewModel
 import com.brenobatista.desafiozup.Data.ReposAdapter
 import com.brenobatista.desafiozup.Models.ServicesResult
 import com.brenobatista.desafiozup.Services.createService
+import com.brenobatista.desafiozup.Views.MainListViewActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class MainListViewModel : ViewModel() {
+class MainListViewModel : BaseViewModel() {
 
-    val reposAdapter = ReposAdapter()
-    var filterAdapter = ReposAdapter()
-
-    val service = createService()
-
-    fun initSearchService(){
+    fun initServices() {
         return service.getServices().enqueue(object : Callback<ServicesResult> {
             override fun onFailure(call: Call<ServicesResult>, t: Throwable) {
                 // Tratar exceções
@@ -40,6 +36,14 @@ class MainListViewModel : ViewModel() {
                 }
             }
         })
+    }
+
+    fun filterData(query: String): ReposAdapter {
+        var lst = reposAdapter.currentList.filter { p ->
+            p.serviceName.toLowerCase().contains(query)
+        }
+        filterAdapter.submitList(lst)
+        return filterAdapter
     }
 
 

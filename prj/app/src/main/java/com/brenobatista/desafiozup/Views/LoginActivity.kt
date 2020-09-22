@@ -6,30 +6,25 @@ import androidx.appcompat.app.AppCompatActivity
 import com.brenobatista.desafiozup.R
 import com.brenobatista.desafiozup.Models.UsersResult
 import com.brenobatista.desafiozup.Services.createService
+import com.brenobatista.desafiozup.ViewModels.CadastroViewModel
+import com.brenobatista.desafiozup.ViewModels.LoginViewModel
+import com.brenobatista.desafiozup.ViewModels.MainListViewModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class LoginActivity : AppCompatActivity() {
 
+    companion object{
+        private val vm = LoginViewModel()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         setSupportActionBar(findViewById(R.id.toolbar))
 
-        var service = createService()
-
-        service.getUsers().enqueue(object : Callback<UsersResult> {
-
-            override fun onFailure(call: Call<UsersResult>, t: Throwable) {
-                // Tratar exceções
-                Log.wtf("GET_DATA_ERROR","Erro ao obter dados do serviço", t)
-            }
-
-            override fun onResponse(call: Call<UsersResult>, response: Response<UsersResult>) {
-                val data = response.body()
-                val repos = data?.users
-            }
-        })
+        // Criação dos serviços de consumo de APIs
+        vm.initServices()
     }
 }
