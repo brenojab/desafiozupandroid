@@ -1,4 +1,4 @@
-package com.brenobatista.desafiozup.Services
+package com.brenobatista.desafiozup.Models
 
 import com.brenobatista.desafiozup.Models.AppUser
 

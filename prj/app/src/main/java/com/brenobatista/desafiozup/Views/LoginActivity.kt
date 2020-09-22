@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.brenobatista.desafiozup.R
-import com.brenobatista.desafiozup.Services.UsersResult
+import com.brenobatista.desafiozup.Models.UsersResult
 import com.brenobatista.desafiozup.Services.createService
 import retrofit2.Call
 import retrofit2.Callback
@@ -18,7 +18,8 @@ class LoginActivity : AppCompatActivity() {
         setSupportActionBar(findViewById(R.id.toolbar))
 
         var service = createService()
-        service.searchUsers().enqueue(object : Callback<UsersResult> {
+
+        service.getUsers().enqueue(object : Callback<UsersResult> {
 
             override fun onFailure(call: Call<UsersResult>, t: Throwable) {
                 // Tratar exceções
