@@ -1,12 +1,16 @@
 package com.brenobatista.desafiozup.ViewModels
 
 import android.util.Log
+import com.brenobatista.desafiozup.Data.ReposAdapter
+import com.brenobatista.desafiozup.Models.AppUser
 import com.brenobatista.desafiozup.Models.UsersResult
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class LoginViewModel : BaseViewModel() {
+
+    var appUsers: List<AppUser>? = null
 
     fun initServices() {
         return service.getUsers().enqueue(object : Callback<UsersResult> {
@@ -18,7 +22,7 @@ class LoginViewModel : BaseViewModel() {
 
             override fun onResponse(call: Call<UsersResult>, response: Response<UsersResult>) {
                 val data = response.body()
-                val repos = data?.users
+                appUsers = data?.users
             }
         })
     }

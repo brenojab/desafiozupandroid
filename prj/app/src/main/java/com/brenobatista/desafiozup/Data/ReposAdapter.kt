@@ -31,7 +31,7 @@ val diffCallback = object : DiffUtil.ItemCallback<ServiceData>() {
 
 class ReposAdapter : ListAdapter<ServiceData, RepoViewHolder>(diffCallback) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RepoViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_repo, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.service_item_layout, parent, false)
         return RepoViewHolder(view)
     }
 

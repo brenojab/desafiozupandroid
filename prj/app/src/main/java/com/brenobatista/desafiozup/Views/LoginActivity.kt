@@ -2,7 +2,9 @@ package com.brenobatista.desafiozup.Views
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.findNavController
 import com.brenobatista.desafiozup.R
 import com.brenobatista.desafiozup.Models.UsersResult
 import com.brenobatista.desafiozup.Services.createService
@@ -26,5 +28,7 @@ class LoginActivity : AppCompatActivity() {
 
         // Criação dos serviços de consumo de APIs
         vm.initServices()
+
+
     }
 }
