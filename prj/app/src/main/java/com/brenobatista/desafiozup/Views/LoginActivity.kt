@@ -1,23 +1,20 @@
 package com.brenobatista.desafiozup.Views
 
+import android.content.Intent
+import android.graphics.BitmapFactory
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.fragment.findNavController
+import com.brenobatista.desafiozup.Models.AppUser
 import com.brenobatista.desafiozup.R
-import com.brenobatista.desafiozup.Models.UsersResult
-import com.brenobatista.desafiozup.Services.createService
-import com.brenobatista.desafiozup.ViewModels.CadastroViewModel
 import com.brenobatista.desafiozup.ViewModels.LoginViewModel
-import com.brenobatista.desafiozup.ViewModels.MainListViewModel
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
+import kotlinx.android.synthetic.main.content_login.*
+
 
 class LoginActivity : AppCompatActivity() {
 
-    companion object{
+    companion object {
         private val vm = LoginViewModel()
     }
 
@@ -26,9 +23,42 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
         setSupportActionBar(findViewById(R.id.toolbar))
 
+        imageViewLogo.setImageResource(R.mipmap.logo)
+
         // Criação dos serviços de consumo de APIs
         vm.initServices()
 
+        findViewById<Button>(R.id.buttonLogin).setOnClickListener {
 
+            val username = editTextUsuario?.text.toString()
+            val password = editTextPassword?.text.toString()
+
+            if (vm.canLogin(username, password)) {
+                val intent = Intent(this, MainListViewActivity::class.java)
+                startActivity(intent)
+            } else {
+                Toast.makeText(this, "Login inválido!", Toast.LENGTH_LONG).show()
+            }
+        }
+
+        findViewById<Button>(R.id.buttonCadastro).setOnClickListener {
+            val intent = Intent(this, CadastroActivity::class.java)
+            startActivity(intent)
+
+            startActivityForResult(intent, 1);
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        // Adiciona novo usuário, retornado do cadastro
+        val newUserName = intent.getStringExtra("newUserName").toString()
+        val newPassword = intent.getStringExtra("newPassword").toString()
+
+        if (!newUserName.isNullOrEmpty() && !newPassword.isNullOrEmpty()) {
+            val newUser = AppUser(newUserName, newPassword)
+            vm.appUsers?.add(newUser)
+        }
     }
 }

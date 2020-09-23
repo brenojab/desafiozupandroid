@@ -1,9 +1,13 @@
 package com.brenobatista.desafiozup.Views
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
+import android.widget.ImageButton
 import android.widget.SearchView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.ButtonBarLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.brenobatista.desafiozup.R
@@ -11,7 +15,7 @@ import com.brenobatista.desafiozup.ViewModels.MainListViewModel
 
 class MainListViewActivity : AppCompatActivity() {
 
-    companion object{
+    companion object {
         private val vm = MainListViewModel()
     }
 
@@ -26,6 +30,24 @@ class MainListViewActivity : AppCompatActivity() {
 
         // Criação dos serviços de consumo de APIs
         vm.initServices()
+
+        findViewById<ImageButton>(R.id.imageButtonMyAccount).setOnClickListener {
+            startBlankActivity("Navegando para minha conta!")
+        }
+
+        findViewById<ImageButton>(R.id.imageButtonMyBalance).setOnClickListener {
+            startBlankActivity("Navegando para meu saldo!")
+        }
+
+        findViewById<ImageButton>(R.id.imageButtonMyCardBill).setOnClickListener {
+            startBlankActivity("Navegando para minha fatura!")
+        }
+    }
+
+    fun startBlankActivity(mainText: String) {
+        val intent = Intent(this, BlankResultActivity::class.java)
+        intent.putExtra("CALLED_INTENT_TEXT", mainText)
+        startActivity(intent)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

@@ -1,11 +1,8 @@
 package com.brenobatista.desafiozup.ViewModels
 
 import android.util.Log
-import androidx.lifecycle.ViewModel
 import com.brenobatista.desafiozup.Data.ReposAdapter
 import com.brenobatista.desafiozup.Models.ServicesResult
-import com.brenobatista.desafiozup.Services.createService
-import com.brenobatista.desafiozup.Views.MainListViewActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -25,10 +22,10 @@ class MainListViewModel : BaseViewModel() {
             ) {
                 try {
                     val data = response.body()
-                    val repos = data?.services
+                    val svcReturn = data?.services
 
-                    if (repos?.count()!! > 0)
-                        reposAdapter.submitList(repos)
+                    if (svcReturn?.count()!! > 0)
+                        reposAdapter.submitList(svcReturn)
 
                 } catch (e: Exception) {
                     // Tratar exceções

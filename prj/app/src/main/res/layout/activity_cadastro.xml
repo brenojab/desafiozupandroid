@@ -7,7 +7,7 @@
     tools:context=".Views.CadastroActivity">
 
     <EditText
-        android:id="@+id/editTextNomeUsuario"
+        android:id="@+id/editTextUsername"
         android:layout_width="317dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="104dp"
@@ -26,10 +26,10 @@
         android:ems="10"
         android:hint="@string/senha_placeholder"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="@+id/editTextNomeUsuario"
+        app:layout_constraintEnd_toEndOf="@+id/editTextUsername"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextNomeUsuario"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNomeUsuario" />
+        app:layout_constraintStart_toStartOf="@+id/editTextUsername"
+        app:layout_constraintTop_toBottomOf="@+id/editTextUsername" />
 
     <TextView
         android:id="@+id/textViewTitulo"
@@ -44,7 +44,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonInsertNewUser"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
